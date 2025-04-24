@@ -8,7 +8,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.charlene.onlineapp.ui.theme.screens.calculator.CalculatorScreen
 import com.charlene.onlineapp.ui.theme.screens.home.Home_screen
+import com.charlene.onlineapp.ui.theme.screens.intent.IntentScreen
 import com.charlene.onlineapp.ui.theme.screens.login.Login_Screen
 import com.charlene.onlineapp.ui.theme.screens.myapp.My_app_screen
 import com.charlene.onlineapp.ui.theme.screens.register.Register_Screen
@@ -35,6 +37,12 @@ NavHost(navController = navController,
     }
     composable(ROUTE_MYAPP){
         My_app_screen(navController)
+    }
+    composable(ROUTE_CALCULATOR){
+        CalculatorScreen(navController)
+    }
+    composable(ROUTE_INTENT){
+        IntentScreen(navController)
     }
 }
 }

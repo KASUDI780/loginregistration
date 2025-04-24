@@ -31,6 +31,7 @@ import androidx.navigation.compose.rememberNavController
 import com.charlene.onlineapp.R
 import com.charlene.onlineapp.navigation.ROUTE_HOME
 import com.charlene.onlineapp.navigation.ROUTE_LOGIN
+import com.charlene.onlineapp.navigation.ROUTE_MYAPP
 import com.charlene.onlineapp.navigation.ROUTE_REGISTER
 import com.charlene.onlineapp.ui.theme.Myblue
 import kotlinx.coroutines.delay
@@ -45,16 +46,16 @@ fun Home_screen(navController: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
-            .background(androidx.compose.ui.graphics.Color.Cyan)) {
+            .background(Color.Cyan)) {
         Text("Kasudi's App",
-            color = androidx.compose.ui.graphics.Color.Blue,
+            color = Color.Blue,
             fontSize = 30.sp,
             fontFamily = FontFamily.Monospace,
 
         )
         Spacer(modifier = Modifier.height(30.dp))
         Text("Welcome to Kasudi's app",
-            color = androidx.compose.ui.graphics.Color.Magenta,
+            color = Color.Magenta,
             fontSize = 30.sp,
             fontFamily = FontFamily.Cursive,
             fontWeight = FontWeight.ExtraBold
@@ -82,7 +83,9 @@ fun Home_screen(navController: NavHostController) {
                 fontFamily = FontFamily.Cursive
             )
         }
-        Button(onClick = {},
+        Spacer(modifier = Modifier.height(30.dp))
+
+        Button(onClick = {navController.navigate(ROUTE_MYAPP)},
             colors = ButtonDefaults.buttonColors(Myblue),
             modifier = Modifier.width(300.dp)) {
             Text("My App",
