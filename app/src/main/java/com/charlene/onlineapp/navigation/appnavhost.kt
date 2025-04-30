@@ -9,6 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.charlene.onlineapp.ui.theme.screens.calculator.CalculatorScreen
+import com.charlene.onlineapp.ui.theme.screens.dashboard.DashboardScreen
 import com.charlene.onlineapp.ui.theme.screens.home.Home_screen
 import com.charlene.onlineapp.ui.theme.screens.intent.IntentScreen
 import com.charlene.onlineapp.ui.theme.screens.login.Login_Screen
@@ -41,8 +42,8 @@ NavHost(navController = navController,
     composable(ROUTE_CALCULATOR){
         CalculatorScreen(navController)
     }
-    composable(ROUTE_INTENT){
-        IntentScreen(navController)
+    composable(ROUTE_DASHBOARD){
+        DashboardScreen(navController)
     }
 }
 }

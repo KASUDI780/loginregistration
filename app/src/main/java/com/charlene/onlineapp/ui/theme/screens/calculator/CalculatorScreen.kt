@@ -13,7 +13,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -29,9 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.charlene.onlineapp.ui.theme.Mynewcolor
 import com.charlene.onlineapp.ui.theme.Newblue
-import com.charlene.onlineapp.ui.theme.screens.intent.IntentScreen
 
 @Composable
 fun CalculatorScreen(navController: NavHostController) {
@@ -47,7 +44,7 @@ fun CalculatorScreen(navController: NavHostController) {
             .background(Newblue)) {
 
 
-        Text("Answer here",
+        Text(answer,
             color = Color.Black,
             fontSize =35.sp,
             fontFamily = FontFamily.Cursive
@@ -79,7 +76,16 @@ fun CalculatorScreen(navController: NavHostController) {
 
         Spacer(modifier = Modifier.height(30.dp))
 
-        Button(onClick = {},
+        Button(onClick = {
+            val myfirstnum=fnum.text.trim()
+            val mysecondnum=snum.text.trim()
+            if (myfirstnum.isEmpty() &&mysecondnum.isEmpty()){
+                answer="Please fill in all detail"
+            }else {
+                val myanswer = myfirstnum.toDouble() +mysecondnum.toDouble()
+                answer = myanswer.toString()
+            }
+        },
             colors = ButtonDefaults.buttonColors(Color.Blue),
             modifier = Modifier.width(150.dp)) {
             Text("+",
@@ -91,7 +97,16 @@ fun CalculatorScreen(navController: NavHostController) {
 
         Spacer(modifier = Modifier.height(30.dp))
 
-        Button(onClick = {},
+        Button(onClick = {
+            val myfirstnum=fnum.text.trim()
+            val mysecondnum=snum.text.trim()
+            if (myfirstnum.isEmpty() &&mysecondnum.isEmpty()){
+                answer="Please fill in all detail"
+            }else {
+                val myanswer = myfirstnum.toDouble() - mysecondnum.toDouble()
+                answer = myanswer.toString()
+            }
+        },
                 colors = ButtonDefaults.buttonColors(Color.Blue),
                 modifier = Modifier.width(150.dp)) {
                 Text("-",
@@ -102,7 +117,16 @@ fun CalculatorScreen(navController: NavHostController) {
 
                 Spacer(modifier = Modifier.height(30.dp))
 
-                Button(onClick = {},
+                Button(onClick = {
+                    val myfirstnum=fnum.text.trim()
+                    val mysecondnum=snum.text.trim()
+                    if (myfirstnum.isEmpty() &&mysecondnum.isEmpty()){
+                        answer="Please fill in all detail"
+                    }else {
+                        val myanswer = myfirstnum.toDouble() / mysecondnum.toDouble()
+                        answer = myanswer.toString()
+                    }
+                },
                     colors = ButtonDefaults.buttonColors(Color.Blue),
                     modifier = Modifier.width(150.dp)) {
                     Text("/",
@@ -112,7 +136,16 @@ fun CalculatorScreen(navController: NavHostController) {
                     )}
 
                 Spacer(modifier = Modifier.height(30.dp))
-                Button(onClick = {},
+                Button(onClick = {
+                    val myfirstnum=fnum.text.trim()
+                    val mysecondnum=snum.text.trim()
+                    if (myfirstnum.isEmpty() &&mysecondnum.isEmpty()){
+                        answer="Please fill in all detail"
+                    }else {
+                        val myanswer = myfirstnum.toDouble() * mysecondnum.toDouble()
+                        answer = myanswer.toString()
+                    }
+                },
                         colors = ButtonDefaults.buttonColors(Color.Blue),
                         modifier = Modifier.width(150.dp)) {
                         Text("*",

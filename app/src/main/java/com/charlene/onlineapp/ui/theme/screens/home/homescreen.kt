@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.charlene.onlineapp.R
+import com.charlene.onlineapp.navigation.ROUTE_DASHBOARD
 import com.charlene.onlineapp.navigation.ROUTE_HOME
 import com.charlene.onlineapp.navigation.ROUTE_LOGIN
 import com.charlene.onlineapp.navigation.ROUTE_MYAPP
@@ -89,6 +90,17 @@ fun Home_screen(navController: NavHostController) {
             colors = ButtonDefaults.buttonColors(Myblue),
             modifier = Modifier.width(300.dp)) {
             Text("My App",
+                color = Color.Black,
+                fontSize = 25.sp,
+                fontFamily = FontFamily.Cursive
+            )
+        }
+        Spacer(modifier = Modifier.height(30.dp))
+
+        Button(onClick = {navController.navigate(ROUTE_DASHBOARD)},
+            colors = ButtonDefaults.buttonColors(Myblue),
+            modifier = Modifier.width(300.dp)) {
+            Text("Dashboard",
                 color = Color.Black,
                 fontSize = 25.sp,
                 fontFamily = FontFamily.Cursive
