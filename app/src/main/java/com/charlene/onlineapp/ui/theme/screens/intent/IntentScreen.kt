@@ -33,13 +33,13 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.charlene.onlineapp.R
-import com.charlene.onlineapp.ui.theme.Mygreen
-import com.charlene.onlineapp.ui.theme.Myorange
+import com.charlene.onlineapp.ui.theme.MyGreen
+import com.charlene.onlineapp.ui.theme.MyOrange
 import androidx.core.net.toUri
 
 
 @Composable
-fun IntentScreen(navController: NavHostController) {
+fun IntentScreen(@Suppress("UNUSED_PARAMETER") navController: NavHostController) {
     val context= LocalContext.current
 
 //    create 7 buttons ;call,dial,camera,sms,share,stk,email
@@ -47,7 +47,7 @@ fun IntentScreen(navController: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
-            .background(Myorange)) {
+            .background(MyOrange)) {
 
         Image(painter = painterResource(id = R.drawable.intent),
             contentDescription = "intent")
@@ -74,7 +74,7 @@ fun IntentScreen(navController: NavHostController) {
         },
 
 
-            colors = ButtonDefaults.buttonColors(Mygreen),
+            colors = ButtonDefaults.buttonColors(MyGreen),
             modifier = Modifier.width(300.dp)) {
             Text("CALL",
                 color = Color.Black,
@@ -95,7 +95,7 @@ fun IntentScreen(navController: NavHostController) {
                 context.startActivity(intent)
 
         },
-            colors = ButtonDefaults.buttonColors(Mygreen),
+            colors = ButtonDefaults.buttonColors(MyGreen),
             modifier = Modifier.width(300.dp)) {
             Text("DIAL",
                 color = Color.Black,
@@ -114,7 +114,7 @@ fun IntentScreen(navController: NavHostController) {
                 startActivityForResult(context as Activity,takePictureIntent,1,null)
 
         },
-            colors = ButtonDefaults.buttonColors(Mygreen),
+            colors = ButtonDefaults.buttonColors(MyGreen),
             modifier = Modifier.width(300.dp)) {
             Text("CAMERA",
                 color = Color.Black,
@@ -139,7 +139,7 @@ fun IntentScreen(navController: NavHostController) {
             context.startActivity(shareIntent)
 
         },
-            colors = ButtonDefaults.buttonColors(Mygreen),
+            colors = ButtonDefaults.buttonColors(MyGreen),
             modifier = Modifier.width(300.dp)) {
             Text("SHARE",
                 color = Color.Black,
@@ -161,7 +161,7 @@ fun IntentScreen(navController: NavHostController) {
             context.startActivity(intent)
 
         },
-            colors = ButtonDefaults.buttonColors(Mygreen),
+            colors = ButtonDefaults.buttonColors(MyGreen),
             modifier = Modifier.width(300.dp)) {
             Text("SMS",
                 color = Color.Black,
@@ -180,7 +180,7 @@ fun IntentScreen(navController: NavHostController) {
             simToolKitLaunchIntent?.let { context.startActivity(it) }
 
         },
-            colors = ButtonDefaults.buttonColors(Mygreen),
+            colors = ButtonDefaults.buttonColors(MyGreen),
             modifier = Modifier.width(300.dp)) {
             Text("STK",
                 color = Color.Black,
@@ -200,7 +200,7 @@ fun IntentScreen(navController: NavHostController) {
             emailIntent.putExtra(Intent.EXTRA_TEXT, "Body")
             context.startActivity(emailIntent)
         },
-            colors = ButtonDefaults.buttonColors(Mygreen),
+            colors = ButtonDefaults.buttonColors(MyGreen),
             modifier = Modifier.width(300.dp)) {
             Text("EMAIL",
                 color = Color.Black,

@@ -28,10 +28,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.charlene.onlineapp.ui.theme.Newblue
+import com.charlene.onlineapp.ui.theme.NewBlue
 
 @Composable
-fun CalculatorScreen(navController: NavHostController) {
+fun CalculatorScreen(@Suppress("UNUSED_PARAMETER") navController: NavHostController) {
     var fnum by remember { mutableStateOf(TextFieldValue("")) }
     var snum by remember { mutableStateOf(TextFieldValue("")) }
     var answer by remember { mutableStateOf("") }
@@ -41,7 +41,7 @@ fun CalculatorScreen(navController: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
-            .background(Newblue)) {
+            .background(NewBlue)) {
 
 
         Text(answer,

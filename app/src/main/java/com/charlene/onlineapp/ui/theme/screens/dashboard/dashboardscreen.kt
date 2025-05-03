@@ -41,8 +41,8 @@ import androidx.navigation.compose.rememberNavController
 import com.charlene.onlineapp.R
 import com.charlene.onlineapp.navigation.ROUTE_HOME
 import com.charlene.onlineapp.navigation.ROUTE_REGISTER
-import com.charlene.onlineapp.ui.theme.Mygreen
-import com.charlene.onlineapp.ui.theme.Mynewcolor
+import com.charlene.onlineapp.ui.theme.MyGreen
+import com.charlene.onlineapp.ui.theme.MyNewColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -50,7 +50,7 @@ fun DashboardScreen(navController: NavHostController) {
 
     Column(modifier = Modifier
         .fillMaxSize()
-        .background(Mynewcolor)
+        .background(MyNewColor)
         .verticalScroll(rememberScrollState())) {
 
 //        start box
@@ -61,7 +61,7 @@ fun DashboardScreen(navController: NavHostController) {
                     .fillMaxWidth()
                     .height(300.dp),
                 shape = RoundedCornerShape(bottomStart = 60.dp, bottomEnd = 60.dp),
-                colors = CardDefaults.cardColors(Mygreen)
+                colors = CardDefaults.cardColors(MyGreen)
 
             ){
                 TopAppBar(
@@ -123,7 +123,7 @@ fun DashboardScreen(navController: NavHostController) {
                     verticalArrangement = Arrangement.Center
                 ) {
                     Image(
-                        painter = painterResource(R.drawable.icon2),
+                        painter = painterResource(R.drawable.home),
                         contentDescription = "home",
                         modifier = Modifier.size(100.dp)
                     )
@@ -150,7 +150,7 @@ fun DashboardScreen(navController: NavHostController) {
                     verticalArrangement = Arrangement.Center
                 ){
                     Image(
-                        painter = painterResource(R.drawable.mall3),
+                        painter = painterResource(R.drawable.about),
                         contentDescription = "home",
                         modifier=Modifier.size(100.dp)
                     )
@@ -180,7 +180,7 @@ fun DashboardScreen(navController: NavHostController) {
                     verticalArrangement = Arrangement.Center
                 ){
                     Image(
-                        painter = painterResource(R.drawable.mall3),
+                        painter = painterResource(R.drawable.cont),
                         contentDescription = "home",
                         modifier = Modifier.size(100.dp)
                     )
@@ -204,7 +204,7 @@ fun DashboardScreen(navController: NavHostController) {
                     verticalArrangement = Arrangement.Center
                 ){
                     Image(
-                        painter = painterResource(R.drawable.mall3),
+                        painter = painterResource(R.drawable.prod),
                         contentDescription = "home",
                         modifier = Modifier.size(100.dp)
                     )
@@ -237,7 +237,7 @@ fun DashboardScreen(navController: NavHostController) {
                     verticalArrangement = Arrangement.Center
                 ){
                     Image(
-                        painter = painterResource(R.drawable.myapp),
+                        painter = painterResource(R.drawable.prod),
                         contentDescription = "home",
                         modifier = Modifier.size(100.dp)
                     )
@@ -264,7 +264,7 @@ fun DashboardScreen(navController: NavHostController) {
                     verticalArrangement = Arrangement.Center
                 ){
                     Image(
-                        painter = painterResource(R.drawable.mall1),
+                        painter = painterResource(R.drawable.prod),
                         contentDescription = "home",
                         modifier = Modifier.size(100.dp)
                     )

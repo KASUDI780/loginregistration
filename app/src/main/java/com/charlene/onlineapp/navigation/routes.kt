@@ -8,4 +8,5 @@ const val ROUTE_MYAPP="myapp"
 const val ROUTE_CALCULATOR="calculator"
 const val ROUTE_INTENT="intent"
 const val ROUTE_DASHBOARD="dashboard"
+const val ROUTE_MYSCREEN="myscreen"
 

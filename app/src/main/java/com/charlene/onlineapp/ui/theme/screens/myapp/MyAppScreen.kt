@@ -21,14 +21,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.charlene.onlineapp.R
 import com.charlene.onlineapp.navigation.ROUTE_CALCULATOR
+import com.charlene.onlineapp.navigation.ROUTE_DASHBOARD
 import com.charlene.onlineapp.navigation.ROUTE_INTENT
-import com.charlene.onlineapp.ui.theme.Myblue
-import com.charlene.onlineapp.ui.theme.Newblue
+import com.charlene.onlineapp.navigation.ROUTE_MYSCREEN
+import com.charlene.onlineapp.ui.theme.MyBlue
+import com.charlene.onlineapp.ui.theme.NewBlue
 
 @Composable
 fun My_app_screen(navController: NavHostController) {
@@ -36,7 +37,7 @@ fun My_app_screen(navController: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
-            .background(Newblue)){
+            .background(NewBlue)){
 
         Image(painter = painterResource(id = R.drawable.myapp),
             contentDescription = "myimage")
@@ -44,7 +45,7 @@ fun My_app_screen(navController: NavHostController) {
         Spacer(modifier = Modifier.height(30.dp))
 
         Button(onClick = {navController.navigate(ROUTE_CALCULATOR)},
-            colors = ButtonDefaults.buttonColors(Myblue),
+            colors = ButtonDefaults.buttonColors(MyBlue),
             modifier = Modifier.width(300.dp)) {
             Text("CALCULATOR",
                 color = Color.Black,
@@ -56,9 +57,35 @@ fun My_app_screen(navController: NavHostController) {
         Spacer(modifier = Modifier.height(30.dp))
 
         Button(onClick = {navController.navigate(ROUTE_INTENT)},
-            colors = ButtonDefaults.buttonColors(Myblue),
+            colors = ButtonDefaults.buttonColors(MyBlue),
             modifier = Modifier.width(300.dp)) {
             Text("INTENT",
+                color = Color.Black,
+                fontSize = 25.sp,
+                fontFamily = FontFamily.Cursive,
+                fontWeight = FontWeight.ExtraBold
+
+            )
+        }
+        Spacer(modifier = Modifier.height(30.dp))
+
+        Button(onClick = {navController.navigate(ROUTE_DASHBOARD)},
+            colors = ButtonDefaults.buttonColors(MyBlue),
+            modifier = Modifier.width(300.dp)) {
+            Text("DASHBOARD",
+                color = Color.Black,
+                fontSize = 25.sp,
+                fontFamily = FontFamily.Cursive,
+                fontWeight = FontWeight.ExtraBold
+
+            )
+        }
+        Spacer(modifier = Modifier.height(30.dp))
+
+        Button(onClick = {navController.navigate(ROUTE_MYSCREEN)},
+            colors = ButtonDefaults.buttonColors(MyBlue),
+            modifier = Modifier.width(300.dp)) {
+            Text("MY SCREEN",
                 color = Color.Black,
                 fontSize = 25.sp,
                 fontFamily = FontFamily.Cursive,

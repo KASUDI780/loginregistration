@@ -17,7 +17,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,14 +28,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.charlene.onlineapp.navigation.ROUTE_HOME
-import com.charlene.onlineapp.navigation.ROUTE_LOGIN
-import com.charlene.onlineapp.navigation.ROUTE_REGISTER
-import com.charlene.onlineapp.ui.theme.Mycolor
-import com.charlene.onlineapp.ui.theme.Mynewcolor
-import com.charlene.onlineapp.ui.theme.screens.login.Login_Screen
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import com.charlene.onlineapp.ui.theme.MyColor
+import com.charlene.onlineapp.ui.theme.MyNewColor
 
 @SuppressLint("CoroutineCreationDuringComposition")
 @Composable
@@ -52,7 +45,7 @@ fun Register_Screen(navController: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
-            .background(Mycolor)) {
+            .background(MyColor)) {
         Text("The Registry Screen",
             color = Color.Green,
             fontSize =35.sp,
@@ -107,7 +100,7 @@ fun Register_Screen(navController: NavHostController) {
 
         Spacer(modifier = Modifier.height(30.dp))
         Button(onClick = {},
-            colors = ButtonDefaults.buttonColors(Mynewcolor),
+            colors = ButtonDefaults.buttonColors(MyNewColor),
             modifier = Modifier.fillMaxWidth()) {
             Text("Click to Register",
                 color = Color.Black,
@@ -125,7 +118,7 @@ fun Register_Screen(navController: NavHostController) {
 
 @Preview
 @Composable
-private fun Registerprev() {
+private fun RegisterPrev() {
     Register_Screen(rememberNavController())
 
 }

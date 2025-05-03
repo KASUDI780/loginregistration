@@ -15,7 +15,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -30,13 +29,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.charlene.onlineapp.R
 import com.charlene.onlineapp.navigation.ROUTE_DASHBOARD
-import com.charlene.onlineapp.navigation.ROUTE_HOME
 import com.charlene.onlineapp.navigation.ROUTE_LOGIN
 import com.charlene.onlineapp.navigation.ROUTE_MYAPP
+import com.charlene.onlineapp.navigation.ROUTE_MYSCREEN
 import com.charlene.onlineapp.navigation.ROUTE_REGISTER
-import com.charlene.onlineapp.ui.theme.Myblue
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import com.charlene.onlineapp.ui.theme.MyBlue
 
 @SuppressLint("CoroutineCreationDuringComposition")
 @Composable
@@ -87,7 +84,7 @@ fun Home_screen(navController: NavHostController) {
         Spacer(modifier = Modifier.height(30.dp))
 
         Button(onClick = {navController.navigate(ROUTE_MYAPP)},
-            colors = ButtonDefaults.buttonColors(Myblue),
+            colors = ButtonDefaults.buttonColors(MyBlue),
             modifier = Modifier.width(300.dp)) {
             Text("My App",
                 color = Color.Black,
@@ -95,17 +92,7 @@ fun Home_screen(navController: NavHostController) {
                 fontFamily = FontFamily.Cursive
             )
         }
-        Spacer(modifier = Modifier.height(30.dp))
 
-        Button(onClick = {navController.navigate(ROUTE_DASHBOARD)},
-            colors = ButtonDefaults.buttonColors(Myblue),
-            modifier = Modifier.width(300.dp)) {
-            Text("Dashboard",
-                color = Color.Black,
-                fontSize = 25.sp,
-                fontFamily = FontFamily.Cursive
-            )
-        }
 
 
         Spacer(modifier = Modifier.height(30.dp))
@@ -126,7 +113,7 @@ fun Home_screen(navController: NavHostController) {
 
 @Preview
 @Composable
-private fun Homeprev() {
+private fun HomePrev() {
     Home_screen(rememberNavController())
 
 }
